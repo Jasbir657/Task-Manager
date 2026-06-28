@@ -2,11 +2,9 @@ const inp = document.querySelector ("input")
 const btn = document.querySelector(".add")
 const todobox = document.querySelector(".todo-list")
 const list = document.querySelector("ul")
-    
-
 
 btn.addEventListener("click",  () => {
-
+    // Create a list to add 
 
     const li = document.createElement("div")
     li.classList.add ("list-li")
@@ -37,6 +35,7 @@ delBtn.addEventListener("click", () => {
 
     })
 
+    // Update Button
 
     const upBtn = document.createElement ("button")
     upBtn.textContent = "Update"
@@ -44,7 +43,6 @@ delBtn.addEventListener("click", () => {
     upBtn.classList.add("update-btn")
 
     upBtn.addEventListener("click" , () => {
-
         inp.value = li.firstChild.textContent
         upBtn.remove()
         li.remove()
